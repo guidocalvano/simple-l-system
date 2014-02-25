@@ -1,0 +1,3 @@
+main.js		starting point of application
+app			contains app specific files
+lib			contains libraries 

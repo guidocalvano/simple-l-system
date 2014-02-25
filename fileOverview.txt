@@ -1,0 +1,2 @@
+js			contains all javascript
+index.html	root html of the application

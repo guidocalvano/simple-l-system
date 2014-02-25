@@ -1,0 +1,7 @@
+Branch.js			The whole L-system that creates the first l system node and starts it
+BranchSegment.js	Base class for the nodes in the L-system.
+						Defines the mesh/material for a branch
+						Serves as a dictionary for sub classed L-system nodes to create other node types.
+BranchSegmentA.js	An L-system node that forks in two
+BranchSegmentB.js	An L-system node that extends a branch further
+ThreeContext.js		Contains all Three.js boilerplate code and makes the whole model rotate.
