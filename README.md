@@ -31,7 +31,9 @@ Overview
 	had the time to register themselves in BranchSegment. So all L-system nodes can now
 	use BranchSegment to construct the other nodes.
 
-STARTING POINT
+Starting point
 
-	index.html is just a boiler plate skeleton that invokes main.js.
+	To start the l-system browse to index.html
+
+	index.html is just a boiler plate skeleton that invokes main.js. 
 	From main.js one can follow how the application is started.
