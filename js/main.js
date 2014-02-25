@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: '/~guidocalvano/algae/js',
+	baseUrl: 'js',
 	shim: {
 		three: {
 			init: function() {
