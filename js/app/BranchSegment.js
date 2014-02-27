@@ -9,7 +9,7 @@ define(['three'], function (THREE) {
 
 			var radius = .6 * thickness;
 
-			this.material = new THREE.MeshBasicMaterial({color:0x331111})
+			this.material = new THREE.MeshBasicMaterial({color:0x221111})
 
 			this.stem = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, length, 8, 1, false), this.material);
 			this.stem.position.y = length * .5;

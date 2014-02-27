@@ -1,4 +1,4 @@
-define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
+define(['three', 'app/BranchSegment', 'app/LeafSegment','app/SegmentDictionary'], function (THREE, BranchSegment, LeafSegment, SegmentDictionary) {
 
 	function BranchSegmentA() {}
 
@@ -29,18 +29,22 @@ define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
 				// Note that each child is a little shorter and thinner.
 				setTimeout((function () {
 
-					var childA = (new BranchSegment.A()).init(depth - 1, length - .4 * length * Math.random(), thickness - .4 * thickness * Math.random());
+					var childA = (new SegmentDictionary.A()).init(depth - 1, length - .4 * length * Math.random(), thickness - .4 * thickness * Math.random());
 
 					this.childANode.add(childA.sceneNode);
 				}).bind(this), 200 + 400 * Math.random());
 
 				setTimeout((function () {
 
-					var childB = (new BranchSegment.B()).init(depth - 1, length - .4 * length * Math.random(), thickness - .4 * thickness * Math.random());
+					var childB = (new SegmentDictionary.B()).init(depth - 1, length - .4 * length * Math.random(), thickness - .4 * thickness * Math.random());
 
 					this.childBNode.add(childB.sceneNode);
 
 				}).bind(this), 200 + 400 * Math.random());
+			} else {
+				var leaf = (new LeafSegment()).init();
+
+				this.childrenNode.add(leaf.sceneNode);
 			}
 			return this;
 		}}
@@ -48,7 +52,7 @@ define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
 
 	BranchSegmentA.prototype.constructor = BranchSegmentA;
 
-	BranchSegment.A = BranchSegmentA;
+	SegmentDictionary.A = BranchSegmentA;
 
 	return BranchSegmentA;
 });

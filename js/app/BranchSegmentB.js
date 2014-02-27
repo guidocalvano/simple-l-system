@@ -1,4 +1,4 @@
-define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
+define(['three', 'app/BranchSegment', 'app/SegmentDictionary'], function (THREE, BranchSegment, SegmentDictionary) {
 
 	function BranchSegmentB() {}
 
@@ -24,7 +24,7 @@ define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
 				setTimeout((function () {
 					// The child is a little shorter and thinner.
 
-					var childA = (new BranchSegment.A()).init(depth - 1, length - .1 * length * Math.random(), thickness - .1 * thickness * Math.random());
+					var childA = (new SegmentDictionary.A()).init(depth - 1, length - .1 * length * Math.random(), thickness - .1 * thickness * Math.random());
 
 					this.childANode.add(childA.sceneNode);
 
@@ -38,7 +38,7 @@ define(['three', 'app/BranchSegment'], function (THREE, BranchSegment) {
 	BranchSegmentB.prototype.constructor = BranchSegmentB;
 
 	console.log('assigning b');
-	BranchSegment.B = BranchSegmentB;
+	SegmentDictionary.B = BranchSegmentB;
 
 	return BranchSegmentB;
 });
